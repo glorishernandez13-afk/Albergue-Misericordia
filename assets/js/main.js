@@ -17,9 +17,8 @@
    ------------------------------------------------------------ */
 const CONFIG = {
   // Número de WhatsApp en formato internacional, SIN "+" ni espacios.
-  // El Salvador = 503. Ejemplo: 50374743147
-  // [COMPLETAR: confirmar el número de WhatsApp oficial del albergue]
-  whatsapp: "50374743147",
+  // El Salvador = 503. Número oficial: +503 7474-5993
+  whatsapp: "50374745993",
 
   // Cómo se envían los formularios. Opciones: "whatsapp" | "mailto" | "formspree"
   // - "whatsapp": abre WhatsApp con los datos ya escritos (no requiere registro).
@@ -28,8 +27,7 @@ const CONFIG = {
   metodoFormulario: "whatsapp",
 
   // Correo destino (se usa solo si metodoFormulario = "mailto").
-  // [COMPLETAR: correo electrónico oficial del albergue]
-  correoDestino: "contacto@alberguemisericordia.org",
+  correoDestino: "medico.albergue@cpses.org",
 
   // Endpoint de Formspree (se usa solo si metodoFormulario = "formspree").
   // Crea un formulario gratis en https://formspree.io y pega aquí tu URL.

@@ -23,9 +23,12 @@ Albergue-Misericordia/
 │   │   ├── auth.js        ← Login SIMULADO (cambiar credenciales aquí)
 │   │   └── panel.js       ← Lógica del calendario y archivos
 │   └── img/
-│       ├── logo.svg               ← Logo (recreación; ver pendientes)
+│       ├── logo-marca.png         ← Logo oficial: solo el corazón (cabecera/footer)
+│       ├── logo-completo.png      ← Logo oficial completo con texto (login)
 │       ├── favicon.svg            ← Ícono de la pestaña del navegador
 │       ├── comedor-voluntarios.jpg← Foto real (comedor)
+│       ├── fachada.jpg            ← Foto real (edificio, tono lavanda)
+│       ├── atencion-medica.jpg    ← Foto real (atención médica)
 │       └── testimonio-julian.jpg  ← Foto real (residente)
 └── data/
     ├── actividades.js     ← 📅 Actividades del calendario (editar aquí)
@@ -86,12 +89,17 @@ bloque `CONFIG`. Hay tres métodos disponibles (cambia `metodoFormulario`):
 
 ```js
 const CONFIG = {
-  whatsapp: "50374743147",          // ← número oficial (sin + ni espacios)
-  metodoFormulario: "whatsapp",     // ← "whatsapp" | "mailto" | "formspree"
-  correoDestino: "...",             // ← si usas mailto
-  formspreeURL: "",                 // ← si usas formspree
+  whatsapp: "50374745993",                 // ← número oficial (sin + ni espacios)
+  metodoFormulario: "whatsapp",            // ← "whatsapp" | "mailto" | "formspree"
+  correoDestino: "medico.albergue@cpses.org", // ← si usas mailto
+  formspreeURL: "",                        // ← si usas formspree
 };
 ```
+
+> **Donaciones en dinero:** el botón "Donar en línea" enlaza a la plataforma
+> oficial del Comité de Proyección Social en
+> [yomeuno.com](https://yomeuno.com/el-salvador/organizaciones/comite-de-proyeccion-social-el-salvador).
+> Las **donaciones en especie** se coordinan por WhatsApp.
 
 ---
 
@@ -150,22 +158,21 @@ Ambos archivos están comentados paso a paso en español.
 
 ## 📝 Lista de datos pendientes `[COMPLETAR]`
 
-Busca el texto `[COMPLETAR` en el proyecto para encontrarlos. Resumen:
+Busca el texto `[COMPLETAR` en el proyecto para encontrarlos.
 
-1. **Logo oficial** en alta resolución (reemplazar `assets/img/logo.svg`).
-2. **Dirección exacta** del albergue (sección "Quiénes somos" y "Contacto").
-3. **Ubicación exacta en Google Maps** (iframe de la sección Contacto).
-4. **Correo electrónico** oficial (Contacto y `CONFIG.correoDestino`).
-5. **Enlace real a Facebook** (cabecera, contacto y footer).
-6. **Número de WhatsApp** oficial (confirmar en `CONFIG.whatsapp`).
-7. **Datos bancarios** para donaciones (sección Donantes).
-8. **Porcentajes reales** de uso de fondos (apartado de Transparencia).
-9. **Otros servicios** del albergue (tarjeta "Y más").
-10. **Requisitos/áreas de voluntariado** específicos.
-11. **Tercer testimonio** (voluntario o familiar) con nombre y foto.
-12. **Fotos adicionales** (habitaciones, fachada, etc.) si se desean usar.
-13. **Actividades reales** del calendario (`data/actividades.js`).
-14. **Archivos privados reales** (`data/archivos.js`).
+✅ **Ya completados:** logo oficial, dirección, mapa de Google, correo,
+Facebook, número de WhatsApp, enlace de donación en línea (yomeuno.com),
+opción de donación en especie y transparencia (100% al albergue).
+
+⏳ **Pendientes:**
+
+1. **Otros servicios** del albergue (tarjeta "Y más" en "Lo que ofrecemos").
+2. **Áreas y requisitos específicos** de voluntariado.
+3. **Tercer testimonio** (voluntario o familiar) con nombre y foto.
+4. **Actividades reales** del calendario (`data/actividades.js`) — ahora hay ejemplos.
+5. **Archivos privados reales** (`data/archivos.js`) — ahora hay ejemplos.
+6. **Dominio final** del sitio (etiquetas `og:url` y `canonical` en `index.html`).
+7. *(Opcional)* **Fotos adicionales** (habitaciones, actividades, etc.).
 
 ---
 

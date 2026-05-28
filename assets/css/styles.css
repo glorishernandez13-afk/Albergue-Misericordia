@@ -36,9 +36,10 @@
   --texto-suave:  #5c5470;
   --texto-claro:  #ffffff;
 
-  /* Acentos cálidos (de la marca: amarillo casita) */
+  /* Acentos de la marca (logo oficial): verde corazón, amarillo casita, rosa texto */
   --amarillo: #f6b21b;
   --verde:    #1f9d8f;
+  --rosa:     #e2698f;
 
   /* Estados */
   --exito: #2e8b6f;
@@ -200,8 +201,8 @@ p { margin: 0 0 1rem; }
 .marca:hover { text-decoration: none; }
 .marca img { width: 42px; height: 42px; }
 .marca__texto { display: flex; flex-direction: column; line-height: 1.05; }
-.marca__texto strong { color: var(--verde); font-size: 1.05rem; }
-.marca__texto span { color: var(--amarillo); font-size: 1.05rem; font-weight: 800; }
+.marca__texto strong { color: var(--verde); font-size: 1.05rem; letter-spacing: .02em; }
+.marca__texto span { color: var(--rosa); font-size: 1.05rem; font-weight: 800; letter-spacing: .02em; }
 
 .nav { display: flex; align-items: center; gap: 1.5rem; }
 .nav__lista {
@@ -402,6 +403,11 @@ p { margin: 0 0 1rem; }
   padding: 1.5rem;
   margin-top: 1.5rem;
 }
+/* Destacado "100% al albergue" */
+.dato-100 { display: flex; align-items: center; gap: 1rem; margin-top: .5rem; }
+.dato-100 strong { font-size: 3rem; line-height: 1; color: var(--lila-600); }
+.dato-100 span { font-weight: 700; color: var(--texto); }
+
 .barras-uso { margin-top: 1rem; display: grid; gap: .9rem; }
 .barra { }
 .barra__top { display: flex; justify-content: space-between; font-weight: 700; font-size: .95rem; margin-bottom: .25rem; }
