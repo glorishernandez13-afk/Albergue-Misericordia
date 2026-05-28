@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Logo del Albergue Misericordia (recreación en SVG basada en la marca real:
+  corazón verde de dos tonos con una casita amarilla en el centro).
+  [COMPLETAR: sustituir por el archivo de logo OFICIAL en alta resolución
+  (PNG o SVG) si se desea fidelidad exacta de marca].
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 110" role="img" aria-label="Logo del Albergue Misericordia: corazón con una casa">
+  <!-- Corazón externo (verde oscuro) -->
+  <path fill="#1f9d8f" d="M60 104C30 84 6 64 6 38 6 21 19 9 35 9c11 0 19 6 25 15 6-9 14-15 25-15 16 0 29 12 29 29 0 26-24 46-54 66z"/>
+  <!-- Corazón interno (verde claro) -->
+  <path fill="#7ec9bd" d="M60 90C36 73 18 57 18 38 18 27 26 19 36 19c9 0 15 6 24 19 9-13 15-19 24-19 10 0 18 8 18 19 0 19-18 35-42 52z"/>
+  <!-- Casa amarilla -->
+  <path fill="#f6b21b" d="M60 38 41 53v22h12V62h14v13h12V53z"/>
+</svg>

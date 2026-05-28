@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO básico ===== -->
+  <title>Albergue Misericordia | Un hogar para pacientes con cáncer en El Salvador</title>
+  <meta name="description" content="El Albergue Misericordia acoge a pacientes con cáncer de escasos recursos mientras reciben tratamiento: alojamiento, alimentación, enfermería 24/7 y transporte a los hospitales. Conoce cómo aplicar, donar o ser voluntario." />
+  <meta name="keywords" content="albergue, cáncer, El Salvador, pacientes, donar, voluntariado, hospedaje, tratamiento" />
+  <meta name="author" content="Albergue Misericordia" />
+  <link rel="canonical" href="https://www.alberguemisericordia.org/" />
+
+  <!-- ===== Open Graph (Facebook / WhatsApp) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Albergue Misericordia | Un hogar para pacientes con cáncer" />
+  <meta property="og:description" content="Acogemos a pacientes con cáncer mientras reciben tratamiento. Conoce cómo aplicar, donar o ser voluntario." />
+  <meta property="og:image" content="assets/img/comedor-voluntarios.jpg" />
+  <meta property="og:locale" content="es_SV" />
+  <!-- [COMPLETAR: og:url con el dominio final del sitio] -->
+  <meta property="og:url" content="https://www.alberguemisericordia.org/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- ===== Tipografía amable y legible (Nunito) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Enlace para saltar al contenido (accesibilidad teclado/lectores) -->
+  <a href="#contenido" class="saltar-contenido">Saltar al contenido principal</a>
+
+  <!-- ============ CABECERA / NAVEGACIÓN ============ -->
+  <header class="cabecera">
+    <div class="cabecera__interior">
+      <a href="#inicio" class="marca" aria-label="Albergue Misericordia, inicio">
+        <img src="assets/img/logo.svg" alt="Logo del Albergue Misericordia" />
+        <span class="marca__texto"><strong>ALBERGUE</strong><span>MISERICORDIA</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__lista" id="menu">
+          <li><a href="#quienes-somos">Quiénes somos</a></li>
+          <li><a href="#ofrecemos">Lo que ofrecemos</a></li>
+          <li><a href="#beneficiarios">Beneficiarios</a></li>
+          <li><a href="#donantes">Donar</a></li>
+          <li><a href="#voluntarios">Voluntariado</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="login.html" class="btn btn--primario">Acceso privado</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ A. HERO ============ -->
+    <section class="hero" id="inicio">
+      <span class="hero__blob hero__blob--1 flota" aria-hidden="true"></span>
+      <span class="hero__blob hero__blob--2 flota" aria-hidden="true"></span>
+      <div class="contenedor">
+        <div class="hero__grid">
+          <div class="hero__texto reveal">
+            <span class="eyebrow">Un hogar lleno de esperanza 💜</span>
+            <h1>Acompañamos a pacientes con cáncer mientras reciben su tratamiento</h1>
+            <p class="hero__lema">Somos un hogar que ofrece alojamiento, alimentación, cuidado y cariño a personas de escasos recursos que vienen de lejos a tratar su cáncer en San Salvador.</p>
+            <div class="hero__cta">
+              <a href="#beneficiarios" class="btn btn--primario">Necesito alojarme</a>
+              <a href="#donantes" class="btn btn--secundario">Quiero donar</a>
+            </div>
+
+            <!-- Acceso rápido a los 4 públicos -->
+            <nav class="publicos-rapido" aria-label="Accesos para nuestros públicos">
+              <a href="#beneficiarios" class="publico-mini"><span class="ico" aria-hidden="true">🏠</span> Beneficiarios</a>
+              <a href="#donantes" class="publico-mini"><span class="ico" aria-hidden="true">💜</span> Donantes</a>
+              <a href="#voluntarios" class="publico-mini"><span class="ico" aria-hidden="true">🤝</span> Voluntarios</a>
+              <a href="login.html" class="publico-mini"><span class="ico" aria-hidden="true">🔒</span> Administradores</a>
+            </nav>
+          </div>
+
+          <div class="hero__imagen reveal">
+            <!-- Foto real del albergue: voluntarios sirviendo alimentos -->
+            <img src="assets/img/comedor-voluntarios.jpg"
+                 alt="Voluntarios y residentes del Albergue Misericordia sirviendo café y comida en el comedor" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ B. QUIÉNES SOMOS ============ -->
+    <section class="seccion" id="quienes-somos">
+      <div class="contenedor">
+        <div class="quienes">
+          <div class="quienes__imagen reveal">
+            <img src="assets/img/testimonio-julian.jpg"
+                 alt="Don Julián, residente del albergue, teje una red de pesca como parte de la terapia ocupacional" />
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">¿Quién es el Albergue Misericordia?</span>
+            <h2>Un refugio para quienes luchan contra el cáncer</h2>
+            <p>El <strong>Albergue Misericordia</strong> nació de una idea sencilla y profundamente humana: nadie debería dormir en la calle mientras lucha contra el cáncer. Muchos pacientes vienen del oriente y del occidente del país para recibir tratamiento en San Salvador y no tienen dónde quedarse ni recursos para pagar un hospedaje.</p>
+            <p>Aquí encuentran un hogar cálido: una cama cómoda, alimentación, atención de enfermería, acompañamiento psicológico y espiritual, y transporte a sus citas. Todo a cambio de una cuota simbólica y voluntaria, definida según un estudio socioeconómico.</p>
+            <p>Fue fundado en <strong>noviembre de 2018</strong> por dos organizaciones hermanas —el <em>Comité de Proyección Social</em> y la <em>Fundación Nuevos Tiempos</em>— a partir de la inquietud del expresidente Armando Calderón Sol al ver a pacientes durmiendo en los alrededores de los hospitales.</p>
+
+            <div class="datos-clave">
+              <div class="dato"><strong>+150</strong><span>personas acogidas</span></div>
+              <div class="dato"><strong>2018</strong><span>año de fundación</span></div>
+              <div class="dato"><strong>24/7</strong><span>atención de enfermería</span></div>
+            </div>
+            <p style="margin-top:1.2rem">
+              <strong>Ubicación:</strong> San Salvador, El Salvador, cerca de los principales centros de tratamiento.
+              <span class="completar">[COMPLETAR: dirección exacta del albergue]</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ C. LO QUE OFRECEMOS ============ -->
+    <section class="seccion seccion--lavanda" id="ofrecemos">
+      <div class="contenedor">
+        <div class="titulo-seccion reveal">
+          <span class="eyebrow">Lo que ofrecemos</span>
+          <h2>Un cuidado integral, con dignidad y cariño</h2>
+          <p>Cada residente recibe mucho más que un techo. Estos son los servicios que hacen del albergue un verdadero hogar.</p>
+        </div>
+
+        <div class="grid-tarjetas">
+          <article class="tarjeta reveal">
+            <div class="tarjeta__ico" aria-hidden="true">🍽️</div>
+            <h3>Tres tiempos de comida</h3>
+            <p>Desayuno, almuerzo y cena, más refrigerios, con una alimentación adecuada para cada paciente.</p>
+          </article>
+          <article class="tarjeta reveal">
+            <div class="tarjeta__ico" aria-hidden="true">🛏️</div>
+            <h3>Camas individuales</h3>
+            <p>Habitaciones cómodas y limpias para descansar y recuperar fuerzas durante el tratamiento.</p>
+          </article>
+          <article class="tarjeta reveal">
+            <div class="tarjeta__ico" aria-hidden="true">🩺</div>
+            <h3>Enfermería 24/7</h3>
+            <p>Personal de enfermería pendiente de los residentes las 24 horas, todos los días.</p>
+          </article>
+          <article class="tarjeta reveal">
+            <div class="tarjeta__ico" aria-hidden="true">🚐</div>
+            <h3>Transporte a los hospitales</h3>
+            <p>Traslado a las citas y tratamientos en los centros de salud de San Salvador.</p>
+          </article>
+          <article class="tarjeta reveal">
+            <div class="tarjeta__ico" aria-hidden="true">🛡️</div>
+            <h3>Seguridad</h3>
+            <p>Instalaciones seguras y vigiladas para la tranquilidad de residentes y familias.</p>
+          </article>
+          <article class="tarjeta reveal">
+            <div class="tarjeta__ico" aria-hidden="true">💚</div>
+            <h3>Apoyo psicológico y espiritual</h3>
+            <p>Acompañamiento psicológico, ocupacional y espiritual para sostener el ánimo y la esperanza.</p>
+          </article>
+          <article class="tarjeta reveal">
+            <div class="tarjeta__ico" aria-hidden="true">🛗</div>
+            <h3>Instalaciones accesibles</h3>
+            <p>Ascensor y espacios pensados para personas con movilidad reducida.</p>
+          </article>
+          <article class="tarjeta reveal">
+            <div class="tarjeta__ico" aria-hidden="true">➕</div>
+            <h3>Y más</h3>
+            <p><span class="completar">[COMPLETAR: otros servicios que ofrece el albergue]</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ D. LOS 4 PÚBLICOS (tarjetas) ============ -->
+    <section class="seccion" id="publicos">
+      <div class="contenedor">
+        <div class="titulo-seccion reveal">
+          <span class="eyebrow">¿Cómo quieres participar?</span>
+          <h2>Hay un lugar para ti</h2>
+          <p>Elige la opción con la que te identificas y te llevamos directo a la información que necesitas.</p>
+        </div>
+
+        <div class="publicos">
+          <article class="publico reveal">
+            <div class="publico__ico" aria-hidden="true">🏠</div>
+            <h3>Beneficiarios</h3>
+            <p>¿Eres paciente con cáncer y necesitas un lugar donde alojarte durante tu tratamiento? Conoce los requisitos y cómo aplicar.</p>
+            <a href="#beneficiarios" class="btn btn--primario btn--bloque">Quiero alojarme</a>
+          </article>
+          <article class="publico reveal">
+            <div class="publico__ico" aria-hidden="true">💜</div>
+            <h3>Donantes</h3>
+            <p>Tu donación sostiene el hogar. Descubre cómo donar y en qué se usa exactamente cada aporte.</p>
+            <a href="#donantes" class="btn btn--primario btn--bloque">Quiero donar</a>
+          </article>
+          <article class="publico reveal">
+            <div class="publico__ico" aria-hidden="true">🤝</div>
+            <h3>Voluntarios</h3>
+            <p>Regala tu tiempo y talento. Te contamos en qué puedes ayudar y los requisitos para sumarte.</p>
+            <a href="#voluntarios" class="btn btn--primario btn--bloque">Quiero ayudar</a>
+          </article>
+          <article class="publico publico--admin reveal">
+            <div class="publico__ico" aria-hidden="true">🔒</div>
+            <h3>Administradores</h3>
+            <p>Personal y trabajadores del albergue: ingresa al panel interno con calendario y archivos privados.</p>
+            <a href="login.html" class="btn btn--secundario btn--bloque">Acceso privado</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== D.1 Detalle BENEFICIARIOS ===== -->
+    <section class="seccion seccion--lavanda" id="beneficiarios">
+      <div class="contenedor">
+        <div class="detalle reveal">
+          <div class="detalle__cabecera">
+            <div class="publico__ico" aria-hidden="true">🏠</div>
+            <div><span class="eyebrow">Beneficiarios</span><h2>¿Necesitas alojarte durante tu tratamiento?</h2></div>
+          </div>
+
+          <div class="grid-tarjetas" style="grid-template-columns:1fr 1fr; align-items:start;">
+            <div>
+              <h3>Requisitos para aplicar</h3>
+              <ul class="lista-check">
+                <li>Ser mayor de 18 años.</li>
+                <li>Presentar documento de identidad (DUI).</li>
+                <li>Contar con un diagnóstico de cáncer.</li>
+                <li>Realizar una entrevista para conocer tu caso.</li>
+                <li>Estudio socioeconómico (define la cuota voluntaria).</li>
+              </ul>
+
+              <h3>¿Qué incluye?</h3>
+              <ul class="lista-check">
+                <li>Estadía con cama individual.</li>
+                <li>Tres tiempos de comida más refrigerios.</li>
+                <li>Atención de enfermería 24/7.</li>
+                <li>Transporte a los hospitales.</li>
+                <li>Apoyo psicológico, ocupacional y espiritual.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Paso a paso</h3>
+              <ol class="pasos">
+                <li>Comunícate con nosotros por teléfono o WhatsApp.</li>
+                <li>Cuéntanos tu caso y agendamos una entrevista.</li>
+                <li>Realizamos el estudio socioeconómico.</li>
+                <li>Confirmamos tu cupo y te damos la bienvenida al hogar.</li>
+              </ol>
+
+              <p class="ayuda">La cuota es simbólica y voluntaria. Si la persona no puede colaborar económicamente, se estudia el caso y puede ser exonerada del pago.</p>
+
+              <div class="hero__cta">
+                <!-- El número de WhatsApp se configura en assets/js/main.js -->
+                <a href="#" data-whatsapp="Hola, soy paciente con cáncer y me gustaría información para alojarme en el Albergue Misericordia." class="btn btn--whatsapp">Escribir por WhatsApp</a>
+                <a href="#contacto" class="btn btn--secundario">Llamar / Contacto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== D.2 Detalle DONANTES + TRANSPARENCIA ===== -->
+    <section class="seccion" id="donantes">
+      <div class="contenedor">
+        <div class="detalle reveal">
+          <div class="detalle__cabecera">
+            <div class="publico__ico" aria-hidden="true">💜</div>
+            <div><span class="eyebrow">Donantes</span><h2>Tu aporte sostiene este hogar</h2></div>
+          </div>
+
+          <p>Cada residente representa un costo aproximado de <strong>$28.00 al día</strong>, mientras que el paciente aporta una cuota voluntaria de apenas <strong>$3.00</strong>. La diferencia se sostiene gracias a personas y empresas solidarias como tú.</p>
+
+          <div class="grid-tarjetas" style="grid-template-columns:1fr 1fr; align-items:start;">
+            <div>
+              <h3>Cómo donar</h3>
+              <ul class="lista-check">
+                <li><strong>Donación económica:</strong> transferencia o depósito bancario. <span class="completar">[COMPLETAR: número de cuenta y banco]</span></li>
+                <li><strong>Donación en especie:</strong> alimentos, insumos de limpieza, medicinas, artículos de higiene.</li>
+                <li><strong>Empresas:</strong> alianzas y donaciones corporativas.</li>
+              </ul>
+              <div class="hero__cta">
+                <a href="#" data-whatsapp="Hola, me gustaría hacer una donación al Albergue Misericordia." class="btn btn--whatsapp">Quiero donar (WhatsApp)</a>
+                <a href="#contacto" class="btn btn--secundario">Contactar</a>
+              </div>
+            </div>
+
+            <!-- TRANSPARENCIA -->
+            <div class="transparencia">
+              <h3 style="margin-top:0">🔎 Transparencia: ¿en qué usamos tu donación?</h3>
+              <p class="ayuda">Así se distribuye, de forma aproximada, el uso de los recursos para cubrir el costo diario por paciente.</p>
+              <div class="barras-uso">
+                <div class="barra">
+                  <div class="barra__top"><span>🍽️ Alimentación</span><span>30%</span></div>
+                  <div class="barra__riel"><div class="barra__valor" style="width:30%"></div></div>
+                </div>
+                <div class="barra">
+                  <div class="barra__top"><span>🩺 Enfermería y salud</span><span>25%</span></div>
+                  <div class="barra__riel"><div class="barra__valor" style="width:25%"></div></div>
+                </div>
+                <div class="barra">
+                  <div class="barra__top"><span>🚐 Transporte a hospitales</span><span>15%</span></div>
+                  <div class="barra__riel"><div class="barra__valor" style="width:15%"></div></div>
+                </div>
+                <div class="barra">
+                  <div class="barra__top"><span>🛗 Mantenimiento e instalaciones</span><span>20%</span></div>
+                  <div class="barra__riel"><div class="barra__valor" style="width:20%"></div></div>
+                </div>
+                <div class="barra">
+                  <div class="barra__top"><span>💚 Apoyo psicológico y espiritual</span><span>10%</span></div>
+                  <div class="barra__riel"><div class="barra__valor" style="width:10%"></div></div>
+                </div>
+              </div>
+              <p class="ayuda" style="margin-top:1rem"><span class="completar">[COMPLETAR: porcentajes reales de uso de fondos verificados por el albergue]</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== D.3 Detalle VOLUNTARIOS ===== -->
+    <section class="seccion seccion--lavanda" id="voluntarios">
+      <div class="contenedor">
+        <div class="detalle reveal">
+          <div class="detalle__cabecera">
+            <div class="publico__ico" aria-hidden="true">🤝</div>
+            <div><span class="eyebrow">Voluntarios</span><h2>Regala tu tiempo, transforma vidas</h2></div>
+          </div>
+
+          <div class="grid-tarjetas" style="grid-template-columns:1fr 1fr; align-items:start;">
+            <div>
+              <h3>¿En qué puedes ayudar?</h3>
+              <ul class="lista-check">
+                <li>Apoyo en el área de cocina.</li>
+                <li>Acompañamiento y actividades con los residentes.</li>
+                <li>Apoyo en limpieza y mantenimiento.</li>
+                <li>Actividades de recaudación de fondos.</li>
+                <li><span class="completar">[COMPLETAR: otras áreas de voluntariado]</span></li>
+              </ul>
+              <h3>Requisitos</h3>
+              <ul class="lista-check">
+                <li>Ser mayor de edad.</li>
+                <li>Compromiso y trato humano con los pacientes.</li>
+                <li><span class="completar">[COMPLETAR: requisitos específicos del voluntariado]</span></li>
+              </ul>
+            </div>
+
+            <div>
+              <!-- Formulario de voluntariado (ver assets/js/main.js para el destino) -->
+              <h3>Quiero ser voluntario/a</h3>
+              <form class="formulario" data-form="voluntario">
+                <div class="campo">
+                  <label for="vol-nombre">Nombre completo</label>
+                  <input id="vol-nombre" name="nombre" type="text" required autocomplete="name" />
+                </div>
+                <div class="campo--doble">
+                  <div class="campo">
+                    <label for="vol-tel">Teléfono</label>
+                    <input id="vol-tel" name="telefono" type="tel" required autocomplete="tel" />
+                  </div>
+                  <div class="campo">
+                    <label for="vol-email">Correo</label>
+                    <input id="vol-email" name="email" type="email" autocomplete="email" />
+                  </div>
+                </div>
+                <div class="campo">
+                  <label for="vol-area">¿En qué te gustaría ayudar?</label>
+                  <select id="vol-area" name="area">
+                    <option>Cocina</option>
+                    <option>Acompañamiento a residentes</option>
+                    <option>Limpieza y mantenimiento</option>
+                    <option>Recaudación de fondos</option>
+                    <option>Donde más se necesite</option>
+                  </select>
+                </div>
+                <div class="campo">
+                  <label for="vol-msj">Mensaje (opcional)</label>
+                  <textarea id="vol-msj" name="mensaje" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn--primario btn--bloque">Enviar solicitud</button>
+                <p class="ayuda">Al enviar, abriremos WhatsApp/correo con tus datos. <span class="completar">[COMPLETAR: configurar destino del formulario — ver instrucciones]</span></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ E. TESTIMONIOS ============ -->
+    <section class="seccion" id="testimonios">
+      <div class="contenedor">
+        <div class="titulo-seccion reveal">
+          <span class="eyebrow">Testimonios</span>
+          <h2>Historias de esperanza</h2>
+          <p>Las voces de quienes han encontrado aquí un hogar lo dicen mejor que nosotros.</p>
+        </div>
+
+        <div class="testimonios">
+          <article class="testimonio reveal">
+            <p>“Aquí atienden bien a las personas de escasos recursos. Lo bueno que he encontrado es que hay amor, nos dan ánimos para seguir viviendo. Nos dan la comida, medicina si me siento mal, me toman la presión. Me siento más que bien y agradecido.”</p>
+            <div class="testimonio__autor">
+              <img src="assets/img/testimonio-julian.jpg" alt="Don Julián Mejía, residente del Albergue Misericordia" />
+              <div><strong>Don Julián Mejía</strong><span>Residente, 64 años — Sonsonate</span></div>
+            </div>
+          </article>
+
+          <article class="testimonio reveal">
+            <p>“Al ver a tantos pacientes sin un lugar donde quedarse nace la inquietud. Se unieron dos organizaciones hermanas y se hizo realidad este albergue. Aquí se les abren las puertas ante sus necesidades.”</p>
+            <div class="testimonio__autor">
+              <span class="avatar-iniciales" aria-hidden="true">CN</span>
+              <div><strong>Cecilia Novoa</strong><span>Gerente de proyectos sociales</span></div>
+            </div>
+          </article>
+
+          <article class="testimonio reveal">
+            <p><span class="completar">[COMPLETAR: testimonio de un voluntario o familiar, con su nombre y foto si la hay]</span></p>
+            <div class="testimonio__autor">
+              <span class="avatar-iniciales" aria-hidden="true">＋</span>
+              <div><strong>[COMPLETAR: nombre]</strong><span>[COMPLETAR: rol]</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ F. CONTACTO ============ -->
+    <section class="seccion seccion--lavanda" id="contacto">
+      <div class="contenedor">
+        <div class="titulo-seccion reveal">
+          <span class="eyebrow">Contacto</span>
+          <h2>Estamos para ayudarte</h2>
+          <p>Escríbenos o llámanos. Con gusto resolvemos tus dudas.</p>
+        </div>
+
+        <div class="contacto-grid">
+          <div class="contacto-info reveal">
+            <div class="contacto-item">
+              <span class="ico" aria-hidden="true">📞</span>
+              <div>
+                <strong>Información general</strong>
+                <a href="tel:+50325230000">2523-0000</a> ·
+                <a href="tel:+50374743147">7474-3147</a>
+              </div>
+            </div>
+            <div class="contacto-item">
+              <span class="ico" aria-hidden="true">🤝</span>
+              <div>
+                <strong>Voluntariado</strong>
+                <a href="tel:+50322714548">2271-4548</a> ·
+                <a href="tel:+50374746977">7474-6977</a>
+              </div>
+            </div>
+            <div class="contacto-item">
+              <span class="ico" aria-hidden="true">✉️</span>
+              <div>
+                <strong>Correo electrónico</strong>
+                <span class="completar">[COMPLETAR: correo electrónico del albergue]</span>
+              </div>
+            </div>
+            <div class="contacto-item">
+              <span class="ico" aria-hidden="true">📍</span>
+              <div>
+                <strong>Dirección</strong>
+                San Salvador, El Salvador <span class="completar">[COMPLETAR: dirección exacta]</span>
+              </div>
+            </div>
+            <div class="hero__cta">
+              <a href="#" data-whatsapp="Hola, me gustaría más información sobre el Albergue Misericordia." class="btn btn--whatsapp">WhatsApp</a>
+              <!-- [COMPLETAR: enlace real a la página de Facebook] -->
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="btn btn--secundario">Facebook</a>
+            </div>
+          </div>
+
+          <!-- Mapa de Google Maps embebido (búsqueda genérica de San Salvador).
+               [COMPLETAR: reemplazar por la ubicación exacta del albergue] -->
+          <div class="mapa reveal">
+            <iframe
+              title="Ubicación aproximada del Albergue Misericordia en San Salvador"
+              src="https://www.google.com/maps?q=San%20Salvador%2C%20El%20Salvador&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ G. FOOTER ============ -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__marca">
+            <img src="assets/img/logo.svg" alt="Logo del Albergue Misericordia" />
+            <span class="marca__texto"><strong style="color:#fff">ALBERGUE</strong><span style="color:var(--amarillo)">MISERICORDIA</span></span>
+          </div>
+          <p>Un hogar que acoge a pacientes con cáncer mientras reciben su tratamiento, con dignidad, cuidado y cariño.</p>
+          <div class="footer__redes">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="#" data-whatsapp="Hola, me gustaría más información sobre el Albergue Misericordia." aria-label="WhatsApp">✆</a>
+          </div>
+        </div>
+        <div>
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#ofrecemos">Lo que ofrecemos</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Participa</h4>
+          <ul>
+            <li><a href="#beneficiarios">Soy beneficiario</a></li>
+            <li><a href="#donantes">Quiero donar</a></li>
+            <li><a href="#voluntarios">Ser voluntario</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__base">
+        <span>© <span id="anio"></span> Albergue Misericordia. Todos los derechos reservados.</span>
+        <a href="login.html" class="acceso-admin">🔒 Acceso administradores</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
