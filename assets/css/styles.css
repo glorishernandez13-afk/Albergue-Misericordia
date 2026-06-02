@@ -46,7 +46,7 @@
   --error: #c0392b;
 
   /* Tipografía */
-  --fuente: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --fuente: "Mulish", "Segoe UI", system-ui, -apple-system, sans-serif;
   --texto-base: 18px;          /* tamaño base cómodo para personas mayores */
 
   /* Formas y sombras */
