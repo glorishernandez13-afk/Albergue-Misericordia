@@ -1,0 +1,1 @@
+Coloca aquí los archivos privados reales (PDF, Word, Excel) y regístralos en data/archivos.js

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel interno | Albergue Misericordia</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Barra superior del panel -->
+  <header class="panel-topbar">
+    <div class="marca">
+      <img src="assets/img/logo-marca.png" alt="Logo del Albergue Misericordia" />
+      <span class="marca__texto"><strong>ALBERGUE</strong><span>MISERICORDIA</span></span>
+    </div>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <span id="saludo" style="font-size:.9rem"></span>
+      <button class="btn btn--fantasma" id="btn-salir" style="padding:.5rem 1rem">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="panel-main">
+    <div class="contenedor">
+      <h1>Panel interno</h1>
+      <p class="ayuda">Gestiona el calendario de actividades y los archivos del albergue.</p>
+
+      <!-- Pestañas -->
+      <div class="panel-tabs" role="tablist">
+        <button class="panel-tab" role="tab" aria-selected="true" data-pane="cal">📅 Calendario</button>
+        <button class="panel-tab" role="tab" aria-selected="false" data-pane="archivos">📁 Archivos privados</button>
+      </div>
+
+      <!-- PANE: Calendario -->
+      <section class="panel-pane activo" id="pane-cal" role="tabpanel">
+        <div class="cal-cabecera">
+          <button class="btn btn--secundario" id="cal-prev" aria-label="Mes anterior">←</button>
+          <h2 id="cal-titulo" style="margin:0"></h2>
+          <button class="btn btn--secundario" id="cal-next" aria-label="Mes siguiente">→</button>
+        </div>
+
+        <div class="leyenda" aria-hidden="true">
+          <span><i class="ev-pasado" style="background:#9aa0ab"></i> Pasada</span>
+          <span><i class="ev-actual" style="background:#1f9d8f"></i> En curso / hoy</span>
+          <span><i class="ev-futuro" style="background:#7338bf"></i> Próxima</span>
+        </div>
+
+        <div class="cal-grid" id="cal-grid"></div>
+
+        <h3 style="margin-top:2rem">Próximas actividades</h3>
+        <div class="lista-actividades" id="lista-proximas"></div>
+      </section>
+
+      <!-- PANE: Archivos -->
+      <section class="panel-pane" id="pane-archivos" role="tabpanel">
+        <h2>Archivos privados</h2>
+        <p class="ayuda">Documentos internos del albergue.</p>
+        <table class="tabla-archivos">
+          <thead>
+            <tr><th>Archivo</th><th>Descripción</th><th>Tipo</th><th>Tamaño</th><th></th></tr>
+          </thead>
+          <tbody id="tabla-archivos-body"></tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal de detalle de actividad -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div class="modal-card">
+      <button class="modal-cerrar" id="modal-cerrar" aria-label="Cerrar">✕</button>
+      <h3 id="modal-titulo"></h3>
+      <div id="modal-cuerpo"></div>
+    </div>
+  </div>
+
+  <!-- Datos (fáciles de editar) -->
+  <script src="data/actividades.js"></script>
+  <script src="data/archivos.js"></script>
+  <!-- Autenticación simulada -->
+  <script src="assets/js/auth.js"></script>
+  <!-- Lógica del panel -->
+  <script src="assets/js/panel.js"></script>
+</body>
+</html>

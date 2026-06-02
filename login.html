@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso privado | Albergue Misericordia</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="login-body">
+  <main class="login-card">
+    <img src="assets/img/logo-completo.png" alt="Logo del Albergue Misericordia" style="width:auto; max-height:130px; margin:0 auto 1rem;" />
+    <h1 style="font-size:1.6rem">Acceso administradores</h1>
+    <p class="ayuda">Área privada para personal y trabajadores del albergue.</p>
+
+    <form class="formulario" id="form-login">
+      <div class="campo">
+        <label for="usuario">Usuario</label>
+        <input id="usuario" name="usuario" type="text" autocomplete="username" required />
+      </div>
+      <div class="campo">
+        <label for="clave">Contraseña</label>
+        <input id="clave" name="clave" type="password" autocomplete="current-password" required />
+      </div>
+      <button type="submit" class="btn btn--primario btn--bloque">Ingresar</button>
+      <p class="mensaje-error" id="error-login" role="alert"></p>
+    </form>
+
+    <p class="aviso">
+      ⚠️ <strong>Demostración:</strong> el acceso es simulado en el navegador y
+      <strong>no es seguro</strong> para archivos confidenciales reales.
+      Antes de usarlo con información sensible, migra a una autenticación real
+      (Supabase o Firebase). Ver instrucciones en <code>README.md</code>.
+    </p>
+
+    <p style="margin-top:1rem"><a href="index.html">← Volver al sitio</a></p>
+  </main>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

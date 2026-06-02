@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Favicon: versión simplificada del logo (corazón verde + casita) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 110">
+  <rect width="120" height="110" rx="24" fill="#ffffff"/>
+  <path fill="#1f9d8f" d="M60 100C32 82 10 63 10 39 10 23 22 12 37 12c10 0 18 6 23 14 5-8 13-14 23-14 15 0 27 11 27 27 0 24-22 43-50 61z"/>
+  <path fill="#7ec9bd" d="M60 87C38 71 21 56 21 39c0-10 7-17 16-17 8 0 14 5 23 17 9-12 15-17 23-17 9 0 16 7 16 17 0 17-17 32-39 48z"/>
+  <path fill="#f6b21b" d="M60 39 43 53v20h11V61h12v12h11V53z"/>
+</svg>
