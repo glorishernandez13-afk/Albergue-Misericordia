@@ -138,7 +138,66 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
 });
 
 /* ------------------------------------------------------------
-   5) Año automático en el footer
+   5) Galería / carrusel de fotos (lightbox)
+   ------------------------------------------------------------
+   👉 PARA AGREGAR FOTOS AL CARRUSEL:
+   Sube la imagen a assets/img/ y añade una línea aquí con su
+   archivo y su descripción (alt). El orden de la lista es el
+   orden en que se mostrarán.
+   ------------------------------------------------------------ */
+const GALERIA = [
+  { src: "assets/img/comedor-voluntarios.jpg", alt: "Personal y residentes del albergue en el comedor" },
+  { src: "assets/img/atencion-medica.jpg",     alt: "Atención de salud a un paciente del albergue" },
+  { src: "assets/img/testimonio-julian.jpg",   alt: "Residente del albergue en terapia ocupacional" },
+
+  // ──────────────────────────────────────────────────────────
+  // FOTOS NUEVAS: una vez que subas estos archivos a assets/img/,
+  // quita las dos barras "//" del inicio de cada línea para que
+  // aparezcan en el carrusel.
+  // { src: "assets/img/manualidad-collar.jpg",  alt: "Collar artesanal hecho por las pacientes: 'Tejido con amor y esperanza por manos valientes'" },
+  // { src: "assets/img/cocina-personal.jpg",    alt: "Integrante del equipo de cocina del albergue" },
+  // { src: "assets/img/manualidad-pulseras.jpg",alt: "Pulseras artesanales elaboradas en el taller del albergue" },
+  // { src: "assets/img/terapia-ocupacional.jpg",alt: "Taller de manualidades y terapia ocupacional con acompañamiento de enfermería" },
+  // { src: "assets/img/rincon-espiritual.jpg",  alt: "Rincón con flores, Biblia y manualidades del albergue" },
+];
+
+const lightbox = document.getElementById("lightbox");
+if (lightbox) {
+  const lbImg = document.getElementById("lb-img");
+  const lbCap = document.getElementById("lb-caption");
+  const lbCont = document.getElementById("lb-contador");
+  let indice = 0;
+
+  function mostrar(i) {
+    indice = (i + GALERIA.length) % GALERIA.length; // navegación circular
+    const foto = GALERIA[indice];
+    lbImg.src = foto.src;
+    lbImg.alt = foto.alt;
+    lbCap.textContent = foto.alt;
+    lbCont.textContent = `${indice + 1} / ${GALERIA.length}`;
+  }
+  function abrir(i) { mostrar(i); lightbox.classList.add("abierto"); document.body.style.overflow = "hidden"; }
+  function cerrar() { lightbox.classList.remove("abierto"); document.body.style.overflow = ""; }
+
+  // Abrir desde el botón "+" o desde la foto de portada
+  document.getElementById("galeria-abrir").addEventListener("click", () => abrir(0));
+  const portada = document.getElementById("galeria-portada");
+  if (portada) portada.addEventListener("click", () => abrir(0));
+
+  document.getElementById("lb-cerrar").addEventListener("click", cerrar);
+  document.getElementById("lb-prev").addEventListener("click", () => mostrar(indice - 1));
+  document.getElementById("lb-next").addEventListener("click", () => mostrar(indice + 1));
+  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) cerrar(); });
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("abierto")) return;
+    if (e.key === "Escape") cerrar();
+    if (e.key === "ArrowLeft") mostrar(indice - 1);
+    if (e.key === "ArrowRight") mostrar(indice + 1);
+  });
+}
+
+/* ------------------------------------------------------------
+   6) Año automático en el footer
    ------------------------------------------------------------ */
 const anio = document.getElementById("anio");
 if (anio) anio.textContent = new Date().getFullYear();

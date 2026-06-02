@@ -70,8 +70,8 @@
         <div class="hero__grid">
           <div class="hero__texto reveal">
             <span class="eyebrow">Un hogar lleno de esperanza 💜</span>
-            <h1>Acompañamos a pacientes con cáncer mientras reciben su tratamiento</h1>
-            <p class="hero__lema">Somos un hogar que ofrece alojamiento, alimentación, cuidado y cariño a personas de escasos recursos que vienen de lejos a tratar su cáncer en San Salvador.</p>
+            <h1>Acortando distancias, acercando esperanza</h1>
+            <p class="hero__lema">Si viajas a San Salvador para recibir tu tratamiento oncológico, no estás solo. Albergue Misericordia te ofrece un hogar sin barreras, cálido y digno mientras te recuperas.</p>
             <div class="hero__cta">
               <a href="#beneficiarios" class="btn btn--primario">Necesito alojarme</a>
               <a href="#donantes" class="btn btn--secundario">Quiero donar</a>
@@ -86,40 +86,44 @@
             </nav>
           </div>
 
-          <div class="hero__imagen reveal">
-            <!-- Foto real del albergue: voluntarios sirviendo alimentos -->
-            <img src="assets/img/comedor-voluntarios.jpg"
+          <!-- Galería del hero: muestra una foto principal y un botón "+"
+               que abre un carrusel con TODAS las fotos del albergue.
+               👉 Para agregar/quitar fotos del carrusel, edita la lista
+                  en assets/js/main.js (bloque GALERIA). -->
+          <div class="hero__galeria reveal">
+            <img id="galeria-portada" src="assets/img/comedor-voluntarios.jpg"
                  alt="Voluntarios y residentes del Albergue Misericordia sirviendo café y comida en el comedor" />
+            <button class="galeria-mas" id="galeria-abrir" aria-haspopup="dialog">
+              <span aria-hidden="true">+</span>
+              <span class="galeria-mas__txt">Ver fotos</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ B. QUIÉNES SOMOS ============ -->
-    <section class="seccion" id="quienes-somos">
+    <!-- ============ B. ALBERGUE MISERICORDIA (sobre nosotros) ============
+         Imagen de fondo a toda la sección con degradado para legibilidad. -->
+    <section class="seccion sobre" id="quienes-somos">
+      <div class="sobre__fondo" aria-hidden="true"></div>
       <div class="contenedor">
-        <div class="quienes">
-          <div class="quienes__imagen reveal">
-            <!-- Foto real de la fachada del albergue (con tono lavanda de marca) -->
-            <img src="assets/img/fachada.jpg"
-                 alt="Fachada del edificio del Albergue Misericordia en San Salvador" />
-          </div>
-          <div class="reveal">
-            <span class="eyebrow">¿Quién es el Albergue Misericordia?</span>
-            <h2>Un refugio para quienes luchan contra el cáncer</h2>
-            <p>El <strong>Albergue Misericordia</strong> nació de una idea sencilla y profundamente humana: nadie debería dormir en la calle mientras lucha contra el cáncer. Muchos pacientes vienen del oriente y del occidente del país para recibir tratamiento en San Salvador y no tienen dónde quedarse ni recursos para pagar un hospedaje.</p>
-            <p>Aquí encuentran un hogar cálido: una cama cómoda, alimentación, atención de enfermería, acompañamiento psicológico y espiritual, y transporte a sus citas. Todo a cambio de una cuota simbólica y voluntaria, definida según un estudio socioeconómico.</p>
-            <p>Fue fundado en <strong>noviembre de 2018</strong> por dos organizaciones hermanas —el <em>Comité de Proyección Social</em> y la <em>Fundación Nuevos Tiempos</em>— a partir de la inquietud del expresidente Armando Calderón Sol al ver a pacientes durmiendo en los alrededores de los hospitales.</p>
+        <div class="sobre__contenido reveal">
+          <span class="eyebrow">Sobre nosotros</span>
+          <h2>Albergue Misericordia</h2>
+          <p class="sobre__subtitulo">Un refugio para quienes luchan contra el cáncer</p>
 
-            <div class="datos-clave">
-              <div class="dato"><strong>+150</strong><span>personas acogidas</span></div>
-              <div class="dato"><strong>2018</strong><span>año de fundación</span></div>
-              <div class="dato"><strong>24/7</strong><span>atención de enfermería</span></div>
-            </div>
-            <p style="margin-top:1.2rem">
-              <strong>Ubicación:</strong> Alameda Juan Pablo II y 23 Avenida Norte, San Salvador, El Salvador — cerca de los principales centros de tratamiento.
-            </p>
+          <p>El <strong>Albergue Misericordia</strong> nació de una idea sencilla y profundamente humana: nadie debería dormir en la calle mientras lucha contra el cáncer. Muchos pacientes vienen del oriente y del occidente del país para recibir tratamiento en San Salvador y no tienen dónde quedarse ni cómo pagar un hospedaje.</p>
+          <p>Aquí encuentran un hogar cálido: una cama cómoda, alimentación, atención de enfermería, acompañamiento psicológico y espiritual, y transporte a sus citas. Todo a cambio de una cuota simbólica y voluntaria, definida según un estudio socioeconómico.</p>
+          <p>Fue fundado en <strong>noviembre de 2018</strong> por dos organizaciones hermanas —el <em>Comité de Proyección Social</em> y la <em>Fundación Nuevos Tiempos</em>.</p>
+
+          <div class="datos-clave">
+            <div class="dato"><strong>+150</strong><span>personas acogidas</span></div>
+            <div class="dato"><strong>2018</strong><span>año de fundación</span></div>
+            <div class="dato"><strong>24/7</strong><span>atención de enfermería</span></div>
           </div>
+          <p style="margin-top:1.2rem">
+            <strong>📍 Ubicación:</strong> Alameda Juan Pablo II y 23 Avenida Norte, San Salvador, El Salvador — cerca de los principales centros de tratamiento.
+          </p>
         </div>
       </div>
     </section>
@@ -161,18 +165,18 @@
           </article>
           <article class="tarjeta reveal">
             <div class="tarjeta__ico" aria-hidden="true">💚</div>
-            <h3>Apoyo psicológico y espiritual</h3>
-            <p>Acompañamiento psicológico, ocupacional y espiritual para sostener el ánimo y la esperanza.</p>
+            <h3>Apoyo espiritual</h3>
+            <p>Acompañamiento espiritual y terapia ocupacional para sostener el ánimo y la esperanza.</p>
           </article>
           <article class="tarjeta reveal">
-            <div class="tarjeta__ico" aria-hidden="true">🛗</div>
-            <h3>Instalaciones accesibles</h3>
-            <p>Ascensor y espacios pensados para personas con movilidad reducida.</p>
+            <div class="tarjeta__ico" aria-hidden="true">🧠</div>
+            <h3>Psicología</h3>
+            <p>Atención psicológica para acompañar tanto al paciente como a sus familiares.</p>
           </article>
           <article class="tarjeta reveal">
-            <div class="tarjeta__ico" aria-hidden="true">➕</div>
-            <h3>Y más</h3>
-            <p><span class="completar">[COMPLETAR: otros servicios que ofrece el albergue]</span></p>
+            <div class="tarjeta__ico" aria-hidden="true">🛋️</div>
+            <h3>Cómodas áreas de estar</h3>
+            <p>Espacios acogedores para descansar, convivir y compartir momentos en comunidad.</p>
           </article>
         </div>
       </div>
@@ -489,6 +493,18 @@
       </div>
     </section>
   </main>
+
+  <!-- ============ CARRUSEL DE FOTOS (lightbox) ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galería de fotos del albergue">
+    <button class="lightbox__cerrar" id="lb-cerrar" aria-label="Cerrar galería">✕</button>
+    <button class="lightbox__nav lightbox__prev" id="lb-prev" aria-label="Foto anterior">‹</button>
+    <figure class="lightbox__figura">
+      <img id="lb-img" src="" alt="" />
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__next" id="lb-next" aria-label="Foto siguiente">›</button>
+    <div class="lightbox__contador" id="lb-contador"></div>
+  </div>
 
   <!-- ============ G. FOOTER ============ -->
   <footer class="footer">
