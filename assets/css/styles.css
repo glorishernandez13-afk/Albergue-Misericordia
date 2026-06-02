@@ -617,7 +617,9 @@ p { margin: 0 0 1rem; }
 
 /* ---------- 18. Responsivo ---------- */
 @media (min-width: 760px) {
-  .hero__grid { grid-template-columns: 1.05fr .95fr; }
+  /* La imagen ocupa toda la altura de la sección y queda más grande */
+  .hero__grid { grid-template-columns: 1fr 1.1fr; align-items: stretch; }
+  .hero__galeria { aspect-ratio: auto; min-height: 480px; height: 100%; }
   .quienes { grid-template-columns: 1fr 1fr; }
   .contacto-grid { grid-template-columns: 1fr 1fr; }
   .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; }
@@ -657,7 +659,7 @@ p { margin: 0 0 1rem; }
   border-radius: var(--radio-lg);
   overflow: hidden;
   box-shadow: var(--sombra-md);
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 4 / 3;            /* en móvil */
 }
 .hero__galeria img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .galeria-mas {
