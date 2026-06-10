@@ -1,0 +1,89 @@
+/* =====================================================================
+   ESTILOS DEL PANEL DEL SALÓN (admin.html)
+   ===================================================================== */
+.admin-body { background: var(--crema); min-height: 100vh; }
+
+/* ---- LOGIN ---- */
+.admin-login { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.login-card {
+  background: var(--blanco); padding: 40px; border-radius: var(--radio);
+  box-shadow: var(--sombra-hover); max-width: 380px; width: 100%; text-align: center;
+}
+.login-card img { margin: 0 auto 16px; }
+.login-card h1 { font-size: 1.6rem; margin-bottom: 6px; }
+.login-card p { color: var(--color-texto-suave); font-size: 0.92rem; margin-bottom: 22px; }
+.login-card .form-group { text-align: left; }
+
+/* ---- PANEL ---- */
+.admin-panel { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.admin-header {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--blanco); padding: 16px 22px; border-radius: var(--radio);
+  box-shadow: var(--sombra-suave); margin-bottom: 18px;
+}
+.admin-brand { display: flex; align-items: center; gap: 12px; font-family: var(--fuente-serif); font-size: 1.1rem; }
+.admin-header-actions { display: flex; align-items: center; gap: 14px; }
+.modo-badge { font-size: 0.78rem; padding: 4px 12px; border-radius: 100px; background: var(--rosa-empolvado); color: var(--espresso); }
+.modo-badge.demo { background: #fbe9d0; }
+
+.admin-tabs { display: flex; gap: 10px; margin-bottom: 18px; }
+.admin-tab {
+  padding: 0.7rem 1.4rem; border-radius: 100px; background: var(--blanco);
+  font-weight: 600; box-shadow: var(--sombra-suave); transition: var(--transicion); color: var(--espresso);
+}
+.admin-tab.active { background: var(--rosa-palo); color: var(--blanco); }
+
+.admin-toolbar { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+.admin-filtros { display: flex; gap: 10px; flex-wrap: wrap; }
+.admin-filtros .form-control { width: auto; min-width: 150px; }
+
+.admin-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-bottom: 20px; }
+.stat-card { background: var(--blanco); border-radius: var(--radio-sm); padding: 18px; box-shadow: var(--sombra-suave); text-align: center; }
+.stat-card .num { font-family: var(--fuente-serif); font-size: 2rem; font-weight: 700; color: var(--rosa-palo); }
+.stat-card .lbl { font-size: 0.82rem; color: var(--color-texto-suave); }
+
+/* ---- Lista de citas ---- */
+.admin-citas { display: flex; flex-direction: column; gap: 12px; }
+.dia-grupo { margin-bottom: 8px; }
+.dia-titulo { font-family: var(--fuente-serif); font-size: 1.15rem; margin: 18px 0 10px; color: var(--espresso); text-transform: capitalize; }
+.cita-row {
+  background: var(--blanco); border-radius: var(--radio-sm); padding: 16px 18px;
+  box-shadow: var(--sombra-suave); display: grid;
+  grid-template-columns: 80px 1fr auto; gap: 16px; align-items: center; border-left: 4px solid var(--rosa-palo);
+}
+.cita-row.estado-atendida { border-left-color: #4caf7d; opacity: 0.85; }
+.cita-row.estado-cancelada { border-left-color: #d98b80; opacity: 0.6; }
+.cita-hora { font-family: var(--fuente-serif); font-size: 1.2rem; font-weight: 700; }
+.cita-hora small { display: block; font-size: 0.7rem; color: var(--color-texto-suave); font-weight: 400; }
+.cita-info h4 { font-size: 1.05rem; margin-bottom: 2px; }
+.cita-info .meta { font-size: 0.85rem; color: var(--color-texto-suave); }
+.cita-info .coment { font-size: 0.85rem; margin-top: 4px; font-style: italic; color: var(--color-texto-suave); }
+.cita-info .tel a { color: var(--rosa-palo); font-weight: 600; }
+.cita-acciones { display: flex; gap: 8px; flex-direction: column; }
+.cita-acciones button { font-size: 0.78rem; padding: 0.4rem 0.9rem; border-radius: 100px; font-weight: 600; transition: var(--transicion); }
+.btn-atender { background: #e7f4ea; color: #226b3a; }
+.btn-cancelar { background: #fbe9e7; color: #8a2c1d; }
+.btn-atender:hover { background: #4caf7d; color: #fff; }
+.btn-cancelar:hover { background: #d98b80; color: #fff; }
+.estado-pill { font-size: 0.72rem; padding: 3px 10px; border-radius: 100px; font-weight: 600; }
+.estado-pill.pendiente { background: var(--rosa-empolvado); color: var(--espresso); }
+.estado-pill.atendida { background: #e7f4ea; color: #226b3a; }
+.estado-pill.cancelada { background: #fbe9e7; color: #8a2c1d; }
+
+.admin-empty { text-align: center; padding: 50px 20px; color: var(--color-texto-suave); }
+.admin-hint { color: var(--color-texto-suave); margin-bottom: 18px; font-size: 0.92rem; }
+
+/* ---- Testimonios admin ---- */
+.admin-testimonios { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.admin-test-card { background: var(--blanco); border-radius: var(--radio-sm); padding: 18px; box-shadow: var(--sombra-suave); }
+.admin-test-card .stars { color: var(--rosa-palo); margin-bottom: 6px; }
+.admin-test-card p { font-style: italic; font-size: 0.92rem; margin-bottom: 10px; }
+.admin-test-card .autor { font-weight: 600; font-size: 0.9rem; margin-bottom: 12px; }
+.admin-test-card .acciones { display: flex; gap: 8px; }
+.admin-test-card .acciones button { font-size: 0.78rem; padding: 0.4rem 0.9rem; border-radius: 100px; font-weight: 600; flex: 1; }
+
+@media (max-width: 640px) {
+  .cita-row { grid-template-columns: 1fr; gap: 10px; }
+  .cita-acciones { flex-direction: row; }
+  .admin-header { flex-direction: column; gap: 12px; }
+}

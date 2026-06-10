@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Panel · Jade García Beauty Studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+
+  <!-- ===== LOGIN ===== -->
+  <div class="admin-login" id="adminLogin">
+    <form class="login-card" id="loginForm">
+      <img src="assets/logos/insignia.svg" alt="Jade García Beauty Studio" width="90" height="90" />
+      <h1>Panel del salón</h1>
+      <p>Ingresa la contraseña para administrar las citas.</p>
+      <div class="form-group">
+        <label for="adminPass">Contraseña</label>
+        <input type="password" id="adminPass" class="form-control" autocomplete="current-password" />
+      </div>
+      <button type="submit" class="btn btn--primary btn--block">Entrar</button>
+      <div class="booking-feedback" id="loginFeedback" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+
+  <!-- ===== PANEL ===== -->
+  <div class="admin-panel" id="adminPanel" hidden>
+    <header class="admin-header">
+      <div class="admin-brand">
+        <img src="assets/logos/insignia.svg" alt="" width="40" height="40" />
+        <strong>Jade García · Panel</strong>
+      </div>
+      <div class="admin-header-actions">
+        <span class="modo-badge" id="modoBadge"></span>
+        <button class="btn btn--outline" id="btnSalir">Salir</button>
+      </div>
+    </header>
+
+    <nav class="admin-tabs">
+      <button class="admin-tab active" data-tab="citas">📅 Citas</button>
+      <button class="admin-tab" data-tab="testimonios">💬 Testimonios</button>
+    </nav>
+
+    <!-- ===== CITAS ===== -->
+    <section class="admin-section" id="tabCitas">
+      <div class="admin-toolbar">
+        <div class="admin-filtros">
+          <input type="date" id="filtroFecha" class="form-control" aria-label="Filtrar por fecha" />
+          <select id="filtroProfesional" class="form-control" aria-label="Filtrar por profesional"></select>
+          <select id="filtroEstado" class="form-control" aria-label="Filtrar por estado">
+            <option value="">Todos los estados</option>
+            <option value="pendiente">Pendientes</option>
+            <option value="atendida">Atendidas</option>
+            <option value="cancelada">Canceladas</option>
+          </select>
+          <button class="btn btn--outline" id="btnLimpiar">Limpiar filtros</button>
+        </div>
+        <button class="btn btn--primary" id="btnRecargar">↻ Actualizar</button>
+      </div>
+
+      <div class="admin-stats" id="adminStats"></div>
+      <div class="admin-citas" id="adminCitas"></div>
+    </section>
+
+    <!-- ===== TESTIMONIOS ===== -->
+    <section class="admin-section" id="tabTestimonios" hidden>
+      <p class="admin-hint">Aprueba o rechaza los testimonios enviados por las clientas. Solo los aprobados se muestran en el sitio.</p>
+      <div class="admin-testimonios" id="adminTestimonios"></div>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/backend-supabase.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- PLACEHOLDER: patrón de corazones repetidos (fondo decorativo sutil). -->
+  <g fill="none" stroke="#CF9089" stroke-width="2">
+    <path d="M30 42 C 16 31, 17 18, 26 18 C 30 18, 30 22, 30 24 C 30 22, 30 18, 34 18 C 43 18, 44 31, 30 42 Z"/>
+    <path d="M90 102 C 76 91, 77 78, 86 78 C 90 78, 90 82, 90 84 C 90 82, 90 78, 94 78 C 103 78, 104 91, 90 102 Z"/>
+  </g>
+</svg>

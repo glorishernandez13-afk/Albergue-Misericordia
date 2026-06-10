@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO (los textos se completan automáticamente desde js/config.js) ===== -->
+  <title>Jade García Beauty Studio | Salón de belleza en El Salvador</title>
+  <meta name="description" content="Salón de belleza en El Salvador. Cabello, uñas, pedicure y faciales. Agenda tu cita en línea con Jade García Beauty Studio." />
+  <meta name="theme-color" content="#3C1F19" />
+
+  <!-- Open Graph (compartir en redes) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jade García Beauty Studio" />
+  <meta property="og:description" content="Realza tu belleza natural. Cabello, uñas, pedicure y faciales en El Salvador." />
+  <meta property="og:image" content="assets/logos/insignia.svg" />
+  <meta property="og:locale" content="es_SV" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Tipografías de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Datos estructurados schema.org BeautySalon (mejora el SEO local) -->
+  <script type="application/ld+json" id="schema-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Jade García Beauty Studio",
+    "image": "assets/logos/insignia.svg",
+    "priceRange": "$$",
+    "address": { "@type": "PostalAddress", "addressCountry": "SV" }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ============================ HEADER ============================ -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#inicio" class="logo-link" aria-label="Inicio - Jade García Beauty Studio">
+        <img src="assets/logos/logo-horizontal.svg" alt="Jade García Beauty Studio" />
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#fundadora">Fundadora</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#agenda" class="btn btn--primary nav-cta">Agenda tu cita</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow" data-content="hero.eyebrow">Beauty Studio · El Salvador</span>
+          <h1 id="heroTitulo"></h1>
+          <p id="heroSubtitulo"></p>
+          <div class="hero-actions">
+            <a href="#agenda" class="btn btn--primary" id="heroBtn">Agenda tu cita</a>
+            <a href="#servicios" class="btn btn--outline">Ver servicios</a>
+          </div>
+        </div>
+        <div class="hero-media reveal">
+          <img id="heroImg" alt="" width="560" height="700" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= QUIÉNES SOMOS ======================= -->
+    <section id="nosotros">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <span class="eyebrow">Quiénes somos</span>
+            <h2 class="section-title" id="nosotrosTitulo"></h2>
+            <div id="nosotrosParrafos"></div>
+          </div>
+          <div class="valores reveal" id="valores"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= FUNDADORA ========================= -->
+    <section id="fundadora" class="section--dark">
+      <div class="container">
+        <div class="founder-grid">
+          <div class="founder-photo reveal">
+            <img id="founderFoto" alt="" width="500" height="667" />
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Sobre la fundadora</span>
+            <h2 class="founder-name" id="founderNombre"></h2>
+            <span class="founder-role" id="founderRol"></span>
+            <div class="founder-bio" id="founderBio"></div>
+            <div class="founder-details" id="founderDetalles"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= SERVICIOS ========================= -->
+    <section id="servicios">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Nuestros servicios</span>
+          <h2 class="section-title">Cuidamos cada detalle de ti</h2>
+          <div class="heart-divider"><img src="assets/logos/isotipo-corazon.svg" alt="" width="20" height="20" /></div>
+        </div>
+        <div class="servicios-tabs reveal" id="serviciosTabs"></div>
+        <div class="servicios-grid reveal" id="serviciosGrid"></div>
+      </div>
+    </section>
+
+    <!-- =========================== AGENDA =========================== -->
+    <section id="agenda" class="agenda">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Reserva en línea</span>
+          <h2 class="section-title">Agenda tu cita</h2>
+          <p class="section-subtitle">Elige tu servicio, tu profesional y el horario que más te convenga. Es rápido y seguro.</p>
+        </div>
+
+        <div class="booking-wrap reveal">
+          <!-- Indicador de pasos -->
+          <div class="booking-steps" id="bookingSteps">
+            <div class="booking-step" data-step="1"><div class="num">1</div><span class="label">Servicio</span></div>
+            <div class="booking-step" data-step="2"><div class="num">2</div><span class="label">Profesional</span></div>
+            <div class="booking-step" data-step="3"><div class="num">3</div><span class="label">Fecha y hora</span></div>
+            <div class="booking-step" data-step="4"><div class="num">4</div><span class="label">Tus datos</span></div>
+          </div>
+
+          <form id="bookingForm" novalidate>
+            <!-- PASO 1: Servicio -->
+            <div class="booking-panel" data-panel="1">
+              <div class="form-group">
+                <label>1. Elige tu servicio</label>
+                <div class="options-grid" id="opcionesServicio" role="radiogroup" aria-label="Servicios"></div>
+              </div>
+            </div>
+
+            <!-- PASO 2: Profesional -->
+            <div class="booking-panel" data-panel="2" hidden>
+              <div class="form-group">
+                <label>2. Elige tu profesional</label>
+                <div class="options-grid" id="opcionesProfesional" role="radiogroup" aria-label="Profesionales"></div>
+              </div>
+            </div>
+
+            <!-- PASO 3: Fecha y hora -->
+            <div class="booking-panel" data-panel="3" hidden>
+              <div class="form-group">
+                <label for="bookingFecha">3. Elige la fecha</label>
+                <input type="date" id="bookingFecha" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Horarios disponibles</label>
+                <div class="slots-grid" id="slotsGrid"><p class="demo-badge">Selecciona una fecha para ver los horarios.</p></div>
+              </div>
+            </div>
+
+            <!-- PASO 4: Datos -->
+            <div class="booking-panel" data-panel="4" hidden>
+              <div class="form-group">
+                <label for="bookingNombre">Nombre completo *</label>
+                <input type="text" id="bookingNombre" class="form-control" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="bookingTelefono">Teléfono (WhatsApp) *</label>
+                <input type="tel" id="bookingTelefono" class="form-control" autocomplete="tel" placeholder="+503 0000 0000" required />
+              </div>
+              <div class="form-group">
+                <label for="bookingComentarios">Comentarios adicionales</label>
+                <textarea id="bookingComentarios" class="form-control" placeholder="¿Algo que debamos saber?"></textarea>
+              </div>
+            </div>
+
+            <!-- PANEL DE ÉXITO -->
+            <div class="booking-panel booking-success" data-panel="success" hidden>
+              <div class="check"><img src="assets/logos/isotipo-corazon.svg" alt="" width="32" height="32" /></div>
+              <h3>¡Cita registrada!</h3>
+              <p id="successMsg"></p>
+              <div class="summary-box"><dl id="successResumen"></dl></div>
+              <a href="#" class="btn btn--primary" id="successWhatsApp" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+              <div style="margin-top:14px"><button type="button" class="btn btn--outline" id="successNueva">Hacer otra reserva</button></div>
+            </div>
+
+            <div class="booking-feedback" id="bookingFeedback" role="status" aria-live="polite"></div>
+
+            <div class="booking-nav" id="bookingNav">
+              <button type="button" class="btn btn--outline" id="btnAtras" hidden>← Atrás</button>
+              <button type="button" class="btn btn--primary" id="btnSiguiente" style="margin-left:auto">Siguiente →</button>
+              <button type="submit" class="btn btn--primary" id="btnConfirmar" style="margin-left:auto" hidden>Confirmar cita</button>
+            </div>
+          </form>
+
+          <p class="demo-badge" id="demoBadge" hidden>⚠️ Modo demostración: las reservas se guardan solo en este navegador. Conecta Supabase (ver README) para activar la nube.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== TESTIMONIOS ======================== -->
+    <section id="testimonios">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Testimonios</span>
+          <h2 class="section-title">Lo que dicen nuestras clientas</h2>
+          <div class="heart-divider"><img src="assets/logos/isotipo-corazon.svg" alt="" width="20" height="20" /></div>
+        </div>
+        <div class="testimonios-grid reveal" id="testimoniosGrid"></div>
+
+        <!-- Formulario para enviar testimonio (con moderación) -->
+        <div class="testimonio-form-wrap reveal" id="testimonioFormWrap" hidden>
+          <h3 style="text-align:center;margin-bottom:6px;">Comparte tu experiencia</h3>
+          <p class="demo-badge" style="margin-bottom:18px;">Tu testimonio se revisará antes de publicarse. ¡Gracias!</p>
+          <form id="testimonioForm">
+            <div class="form-group">
+              <label for="tNombre">Tu nombre *</label>
+              <input type="text" id="tNombre" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label>Tu calificación *</label>
+              <div class="stars-input">
+                <input type="radio" name="estrellas" id="e5" value="5" /><label for="e5" title="5 estrellas">★</label>
+                <input type="radio" name="estrellas" id="e4" value="4" /><label for="e4" title="4 estrellas">★</label>
+                <input type="radio" name="estrellas" id="e3" value="3" /><label for="e3" title="3 estrellas">★</label>
+                <input type="radio" name="estrellas" id="e2" value="2" /><label for="e2" title="2 estrellas">★</label>
+                <input type="radio" name="estrellas" id="e1" value="1" /><label for="e1" title="1 estrella">★</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tComentario">Tu comentario *</label>
+              <textarea id="tComentario" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">Enviar testimonio</button>
+            <div class="booking-feedback" id="testimonioFeedback" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== GALERÍA ========================== -->
+    <section id="galeria" class="section--dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Galería</span>
+          <h2 class="section-title">Nuestros trabajos</h2>
+        </div>
+        <div class="galeria-filtros reveal" id="galeriaFiltros"></div>
+        <div class="galeria-grid reveal" id="galeriaGrid"></div>
+        <div class="antes-despues reveal" id="antesDespues"></div>
+      </div>
+    </section>
+
+    <!-- ======================= REDES SOCIALES ======================= -->
+    <section id="redes">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Síguenos</span>
+          <h2 class="section-title">Conecta con nosotras</h2>
+          <p class="section-subtitle">Inspiración, promociones y novedades en nuestras redes.</p>
+        </div>
+        <div class="redes-grid reveal" id="redesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ========================== CONTACTO ========================== -->
+    <section id="contacto" class="agenda">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contacto</span>
+          <h2 class="section-title">Visítanos</h2>
+        </div>
+        <div class="contacto-grid reveal">
+          <div class="contacto-info" id="contactoInfo"></div>
+          <div class="mapa"><iframe id="mapaIframe" title="Mapa de ubicación" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== BOTÓN FLOTANTE WHATSAPP ===================== -->
+  <a href="#" class="wa-float" id="waFloat" aria-label="Escríbenos por WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="assets/logos/logo-horizontal-crema.svg" alt="Jade García Beauty Studio" />
+          <p id="footerEslogan"></p>
+          <div class="footer-social" id="footerSocial"></div>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#agenda">Agenda tu cita</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul class="footer-links" id="footerContacto"></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="privacidad" id="footerPrivacidad"></p>
+        <p>© <span id="year"></span> Jade García Beauty Studio. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <!-- Cliente de Supabase (solo se usa si configuras el backend). -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Configuración editable (debe ir antes que el resto). -->
+  <script src="js/config.js"></script>
+  <!-- Adaptador de backend (Supabase / demo). -->
+  <script src="js/backend-supabase.js"></script>
+  <!-- Lógica de reservas (módulo intercambiable). -->
+  <script src="js/booking.js"></script>
+  <!-- Render del contenido e interacciones generales. -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 130" role="img" aria-label="Jade García Beauty Studio">
+  <!-- PLACEHOLDER: versión crema sobre café (para fondos oscuros: header/footer oscuros). -->
+  <defs>
+    <style>
+      .firma { font-family: 'Pinyon Script', cursive; fill: #F7F1EC; }
+      .sub   { font-family: 'Cormorant Garamond', serif; fill: #E5CEC8; letter-spacing: 6px; font-weight: 600; }
+    </style>
+  </defs>
+  <text x="210" y="64" text-anchor="middle" class="firma" font-size="62">Jade García</text>
+  <line x1="120" y1="86" x2="300" y2="86" stroke="#D6A692" stroke-width="1"/>
+  <text x="210" y="108" text-anchor="middle" class="sub" font-size="17">BEAUTY STUDIO</text>
+</svg>

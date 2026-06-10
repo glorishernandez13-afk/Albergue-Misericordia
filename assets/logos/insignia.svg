@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Insignia Jade García Beauty Studio">
+  <!-- PLACEHOLDER: insignia circular con monograma "J." (favicon / avatar). -->
+  <circle cx="100" cy="100" r="96" fill="#3C1F19"/>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#D6A692" stroke-width="1.5"/>
+  <text x="100" y="118" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="86" fill="#E5CEC8">J.</text>
+  <path id="arc" d="M 100 100 m -66 0 a 66 66 0 1 1 132 0" fill="none"/>
+  <text font-family="'Cormorant Garamond', serif" font-size="13" fill="#CF9089" letter-spacing="4">
+    <textPath href="#arc" startOffset="50%" text-anchor="middle">BEAUTY STUDIO</textPath>
+  </text>
+</svg>
